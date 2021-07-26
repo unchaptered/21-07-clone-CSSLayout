@@ -1,0 +1,23 @@
+/* reset */
+@import "reset/reset.css";
+/* components */
+/* root */
+@import "root.css";
+/* page */
+@import "index.css";
+/* animation */
+@import "animation/index_nav_flip.css";
+
+body {
+  /* size */
+  width: 100vw;
+  height: 100vh;
+  /* design */
+  background-color: papayawhip;
+  /* display */
+  display: flex;
+  justify-content: space-between;
+}
+.display-none {
+  display: none;
+}

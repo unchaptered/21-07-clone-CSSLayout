@@ -1,0 +1,34 @@
+.parent {
+  /* size */
+  width: 400px;
+  height: 400px;
+  /* design */
+  background-color: lightcoral;
+  /* display */
+  display: flex;
+  /* text */
+  /* align */
+  align-self: center;
+  align-content: space-around;
+  /* justify */
+  justify-self: center;
+  justify-content: space-around;
+  /* flex-wrap */
+}
+.child {
+  /* size */
+  width: 107px;
+  height: 107px;
+  /* design */
+  background-color: lightskyblue;
+  /* display */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.child:nth-child(1) {
+  flex-grow: 9;
+  background-color: red;
+}
+.child:nth-child(2) {
+}
