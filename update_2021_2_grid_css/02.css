@@ -1,0 +1,13 @@
+.father {
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  grid-template-rows: 100px 70px 300px;
+  gap: 10px;
+}
+.child {
+  flex-basis: 30%;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  background-color: olivedrab;
+}

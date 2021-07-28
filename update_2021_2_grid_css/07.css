@@ -1,0 +1,44 @@
+.grid {
+  /* size */
+  height: 50vh;
+  /* display */
+  display: grid;
+  grid-gap: 10px;
+  /* grid-template-columns: repeat(4, 1fr);
+  column 은 그냥 써도 되지만
+  grid-template-rows: repeat(4, 1fr);
+  rows 에서는 height 를 지정해줘야한다. */
+  grid-template:
+    [header-start] "header header header header" [header-end] 1fr
+    [content-start] "content content content nav" [content-end] 2fr
+    [footer-start] "footer footer footer footer" [footer-end] 1fr / 1fr 1fr 1fr 1fr;
+}
+.header {
+  background-color: orange;
+  grid-area: header;
+}
+.content {
+  background-color: orangered;
+  grid-area: content;
+}
+.nav {
+  background-color: palegoldenrod;
+  grid-area: nav;
+}
+.footer {
+  background-color: palevioletred;
+  grid-area: footer;
+}
+
+/*  Diffrence "1fr" and "25%" (4 column)
+  gap(margin,padding) 등이 없을 때는 동일한 결과가 나온다.
+  gap(margin,padding) 등이 있을 때는 다른 결과가 나온다.
+    1fr 화면을 나가는 것 없이 제대로 보인다.
+    25% 화면을 나가버린다.
+
+  fr(franjaction) 은 사용가능한 공간을 기준으로 삼고,
+  %(percent) 는 parent 의 공간을 기준으로 잡는다.
+
+  따라서 fr는 사용 불가능한 gap(margin,padding)을 고려하지만,
+  %는 부모가 가지고 있는 gap(margin,padding)을 고려하지 않는다.
+*/

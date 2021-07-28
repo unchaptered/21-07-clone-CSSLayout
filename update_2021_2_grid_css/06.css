@@ -1,0 +1,30 @@
+.grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: [first-line] 100px [second-line] 100px [third-line] 100px [fourth-line] 100px [fifth-line] 100px;
+  grid-template-rows: repeat(4, 200px [sexy-line]);
+}
+.header {
+  background-color: orange;
+  grid-column: first-line / -1;
+  /*grid-column: 1/-1; ===
+    grid-column: 1/5;
+   */
+}
+.content {
+  background-color: orangered;
+  grid-row: sexy-line 1 / sexy-line 3;
+  /*grid-row:2/-2;
+    grid-row:2/4;
+   */
+  grid-column: first-line / fourth-line;
+}
+.nav {
+  background-color: palegoldenrod;
+  grid-row: sexy-line 1 / -2;
+  grid-column: fourth-line / -1;
+}
+.footer {
+  background-color: palevioletred;
+  grid-column: first-line / -1;
+}

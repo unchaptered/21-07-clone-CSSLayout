@@ -1,0 +1,39 @@
+.grid {
+  height: 100vh;
+  background-color: darkolivegreen;
+  display: grid;
+  place-items: stretch stretch;
+  place-content: center center;
+
+  grid-gap: 10px;
+  grid-template: repeat(4, 60px) / repeat(4, 60px);
+  grid-template-areas:
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer";
+}
+.header {
+  background-color: orange;
+  min-width: 20px;
+  min-height: 20px;
+  grid-area: header;
+}
+.content {
+  background-color: orangered;
+  min-width: 20px;
+  min-height: 20px;
+  grid-area: content;
+}
+.nav {
+  background-color: palegoldenrod;
+  min-width: 20px;
+  min-height: 20px;
+  grid-area: nav;
+}
+.footer {
+  background-color: palevioletred;
+  min-width: 20px;
+  min-height: 20px;
+  grid-area: footer;
+}

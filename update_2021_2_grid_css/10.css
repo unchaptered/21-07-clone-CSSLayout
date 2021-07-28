@@ -1,0 +1,33 @@
+.grid {
+  min-width: 100vw;
+  width: auto;
+  min-height: 100vh;
+  height: auto;
+  background-color: darkolivegreen;
+  display: grid;
+  place-items: stretch stretch;
+  place-content: start start;
+
+  grid-gap: 10px;
+  grid-template: repeat(4, 60px) / repeat(4, 60px);
+  grid-auto-rows: 60px;
+  grid-auto-flow: column;
+  grid-auto-columns: 60px;
+
+  /* grid-auto-rows */
+  /* grid-template-areas:
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer"; */
+}
+/* odd 홀수 */
+.item:nth-child(odd) {
+  background-color: lightgreen;
+}
+/* even 짝수 */
+.item:nth-child(even) {
+  background-color: lightskyblue;
+}
+.item:nth-child(n + 17) {
+}

@@ -1,0 +1,24 @@
+.grid {
+  color: white;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(5, minmax(2opx, max-content));
+  grid-auto-rows: 100px;
+  margin-bottom: 30px;
+  /* grid-auto-rows */
+  /* grid-template-areas:
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer"; */
+}
+/* odd 홀수 */
+.item:nth-child(odd) {
+  background-color: lightgreen;
+}
+/* even 짝수 */
+.item:nth-child(even) {
+  background-color: lightskyblue;
+}
+.item:nth-child(n + 17) {
+}
