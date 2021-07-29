@@ -2,21 +2,20 @@
 @import "_mixins.scss";
 @import "_buttons.scss";
 
-div > a {
-  @include link($color);
-  &:nth-child(odd) {
-    @include link("odd");
+h1 {
+  color: red;
+  @include responsive("iphone") {
+    color: yellow;
   }
-  &:nth-child(even) {
-    @include link("even");
+  @include responsive("iphone-l") {
+    font-size: 200px;
   }
-}
-a {
-  @extend %button;
-  text-decoration: none;
+  @include responsive("ipad") {
+    color: green;
+  }
 }
 
-button {
-  @extend %button;
-  border: none;
-}
+// button {
+//   @extend %button;
+//   border: none;
+// }
