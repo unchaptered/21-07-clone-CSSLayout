@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,IAAI,CAAC;EACH,gBAAgB,ECHb,IAAI;CDIR",
+    "sources": [
+        "../mini/test.scss",
+        "../mini/_test.scss"
+    ],
+    "names": [],
+    "file": "test.css"
+}

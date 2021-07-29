@@ -1,0 +1,39 @@
+a, button {
+  border-radius: 7px;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background-color: cadetblue;
+  color: white;
+  font-size: 600;
+  font-family: inherit;
+}
+
+div > a {
+  text-decoration: none;
+  display: block;
+  font-size: 30px;
+  color: black;
+}
+
+div > a:nth-child(odd) {
+  text-decoration: none;
+  display: block;
+  font-size: 30px;
+  color: blue;
+}
+
+div > a:nth-child(even) {
+  text-decoration: none;
+  display: block;
+  font-size: 30px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
