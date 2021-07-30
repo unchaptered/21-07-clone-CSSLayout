@@ -3,169 +3,202 @@
 @import "_responsive.scss";
 
 body {
-  height: 300vh;
+  // size
+  width: auto;
+  height: 2000vh;
+  // design
   background-color: lightcoral;
 }
-$aside_left_text-size: 300px;
-$aside_left_text-color: lightcoral;
-$aside_left_link-color: rgb(161, 159, 159);
-$aside_left_link-color-strong: rgb(80, 80, 80);
 
-$aside_media_left-min: 800px;
-$aside_media_left-max: 100%;
-$aside_media_top-min: 0;
-$aisde_media_top-max: 799px;
+$font-size_title: 60px;
+$font-size_subtitle: 22px;
+$font-size_description: 18px;
+$font-size_link: 16px;
 
+$font-color_title: rgb(247, 67, 67);
+$font-color_subtitle: rgb(233, 77, 77);
+$font-color_description: rgb(238, 146, 146);
+$font-color_link: rgb(209, 68, 68);
+
+$border_color: $font-color_link;
+$border_anchor: 1px solid $border_color;
 #aside-left {
-  // font
   // position
+  z-index: 2;
   position: fixed;
-  // size (default)
+  // size
+  min-width: 400px;
+  // 1025px 이하일때 미디어 쿼리 적용
   width: 40%;
-  height: 100%;
-  // display
-  color: $aside_left_text-color;
+  height: 100vh;
+  // design
   background-color: white;
+  // display
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-
   .aside_clmn {
-    min-width: $aside_left_text-size;
-    width: 80%;
+    // size
+    width: 90%;
+    height: 100%;
+    // marign
+    margin: 5% 2.5% 0 2.5%;
+
+    // display
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .aside_clmn:nth-child(1) {
     // margin
-    margin-top: 100px;
+    margin-bottom: 30%;
     // size
     height: 20%;
-
     #aside_title {
-      font-size: 40px;
-      font-weight: 600;
-      // display
-      display: block;
+      @extend %h1_title;
     }
   }
   .aside_clmn:nth-child(2) {
-    // margin
-    margin-bottom: 50px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    height: 50%;
+    align-items: center;
     justify-content: flex-end;
-
     #aside_subtitle {
-      // margin
-      margin-bottom: 30px;
-
-      // font
-      font-size: 22px;
-      line-height: 30px;
-
-      // design
+      @extend %h3_subtitle;
     }
     #aside_description {
-      // margin
-      margin-bottom: 30px;
-
-      // font
-      font-size: 18px;
-      line-height: 25px;
-
-      // design
+      @extend %h4_description;
     }
-
     #aside_link {
-      a {
-        button {
-          @extend %button-settings;
-        }
-        @extend %anchor-settings;
-      }
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      display: block;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      a {
+        @extend %a;
+        margin-right: 10px;
+        button {
+          @extend %button;
+        }
+      }
     }
   }
 }
 
-%button-settings {
-  // border
-  border: inherit;
-  // display
-  background-color: inherit;
-}
-%anchor-settings {
-  // size
-  height: 30px;
-  // font
-  color: $aside_left_link-color-strong;
-  font-size: 15px;
-  line-height: 40px;
-  text-decoration: none;
-  border-bottom: 1px solid $aside_left_link-color;
-}
-
-$gird_div-size: 100vh;
 #main {
   // position
   position: absolute;
   right: 0;
-  // padding
-  background-color: lightcyan;
-  // size
   width: 60%;
+  height: auto;
+  background-color: rgb(187, 206, 187);
 
-  // display
   display: grid;
-  grid-template: repeat(1, $gird_div-size) / repeat(1, minmax(100%, 0));
-  grid-auto-flow: row;
-  grid-auto-rows: $gird_div-size;
-  div:nth-child(even) {
-    background-color: lightpink;
+  gap: 5vh;
+  .main_row {
+    width: 100%;
+    height: 100vh;
+    // display
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .main_row_row {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: flex-end;
+      background-color: mediumblue;
+      .video_title {
+        // size
+        width: 60%;
+        // font
+        font-size: 40px;
+        display: block;
+        background-color: magenta;
+      }
+      .video_description {
+        // size
+        width: 40%;
+        // font
+        font-size: 18px;
+        // display
+        display: block;
+        text-align: right;
+        background-color: maroon;
+      }
+    }
+    .main_row_row:nth-child(1) {
+      justify-content: space-between;
+    }
+    .main_row_row:nth-child(2) {
+      width: 100%;
+      height: 50%;
+      background-color: limegreen;
+
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+    .main_row_row:nth-child(3) {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      align-self: flex-end;
+      justify-content: flex-end;
+      .video_description {
+        margin-right: 10px;
+      }
+      .video_description_clmn {
+        margin-right: 10px;
+      }
+    }
   }
-  div:nth-child(odd) {
+  .main_row:nth-child(odd) {
+    background-color: lightskyblue;
+  }
+  .main_row:nth-child(even) {
     background-color: lightgreen;
   }
 }
 
-@include PC() {
-  #aside-left {
-    position: absolute;
-    top: 0;
-
-    width: 100%;
-
-    max-width: 100%;
-    height: 80%;
-    .aside_clmn:nth-child(1) {
-      // margin
-      // size
-      #aside_title {
-        font-size: 70px;
-      }
-    }
-    .aside_clmn:nth-child(2) {
-      // margin
-      margin-bottom: 50px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-
-      #aisde_subtitle {
-        margin-bottom: 10px;
-      }
-      #aside_description {
-        margin-bottom: 10px;
-      }
-    }
-  }
-  #main {
-    width: 100%;
-    transform: translateY(750px);
-  }
+%h1_title {
+  font-size: $font-size_title;
+  color: $font-color_title;
+}
+%h3_subtitle {
+  @extend %h123456;
+  margin-bottom: 50px;
+  font-size: $font-size_subtitle;
+  color: $font-color_subtitle;
+}
+%h4_description {
+  @extend %h123456;
+  margin-bottom: 50px;
+  font-size: $font-size_description;
+  color: $font-color_description;
+}
+%h123456 {
+  line-height: 30px;
+  // 미디어 쿼리로 가로 배열 바꿀때 정렬
+}
+%a {
+  // size
+  width: auto;
+  height: 20px;
+  // font
+  font-size: $font-size_link;
+  // display
+  display: inline-block;
+  color: $font-color_link;
+  border-bottom: $border_anchor;
+}
+%button {
+  // design
+  color: $font-color_link;
+  border: inherit;
+  border-bottom: none;
+  background-color: inherit;
 }

@@ -1,50 +1,22 @@
 // For Example About responsive
 
+//기준점 800px
 $min_screen: 800px;
 $max_screen: none;
-@mixin PC() {
-  @media screen and (min-width: $min_screen) {
-  }
-  @media screen and (max-width: 799px) {
-    @content;
-  }
-}
-// $min_screen: 800px;
-// $max_screen: none;
-// @mixin PC() {
-//   @media screen and (min-width: 800px) {
-//     #aisde-left {
-//       @content;
-//     }
+// @mixin aside-size() {
+//   @media screen and (min-width: $min_screen) {
 //     @content;
 //   }
-//   @media screen and (max-width: 799px) {
-//     #aside-left {
-//       @content;
-//     }
+//   @media screen and (max-width: $min_screen-1) {
 //     @content;
 //   }
 // }
-// $min_iphone: 500px;
-// $max_iphone: 690px;
-// $min_tablet: $min_iphone + 1;
-// $max_tablet: 1120px;
-// @mixin responsive($device) {
-//   @if $device == "iphone" {
-//     @media screen and (min-width: $min_iphone) and (max-width: $max_iphone) {
-//       @content;
-//     }
-//   } @else if $device == "ipad" {
-//     @media screen and (min-width: $min_tablet) and (max-width: $max_tablet) {
-//       @content;
-//     }
-//   } @else if $device == "iphone-l" {
-//     @media screen and (min-width: $min_iphone) and (max-width: $max_iphone) and (orientation: landscape) {
-//       @content;
-//     }
-//   } @else if $device == "ipad-l" {
-//     @media screen and (min-width: $min_tablet) and (max-width: $max_tablet) and (orientation: landscape) {
-//       @content;
-//     }
+
+// @mixin main-size() {
+//   @media screen and (min-width: $min_screen) {
+//     @content;
+//   }
+//   @media screen and (max-width: $min_screen-1) {
+//     @content;
 //   }
 // }
