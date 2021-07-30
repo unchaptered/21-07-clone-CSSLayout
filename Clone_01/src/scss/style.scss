@@ -27,7 +27,6 @@ $border_anchor: 1px solid $border_color;
   z-index: 2;
   position: fixed;
   // size
-  min-width: 400px;
   // 1025px 이하일때 미디어 쿼리 적용
   width: 40%;
   height: 100vh;
@@ -85,82 +84,27 @@ $border_anchor: 1px solid $border_color;
     }
   }
 }
-
-#main {
+#index_main {
   // position
   position: absolute;
   right: 0;
   width: 60%;
-  height: auto;
-  background-color: rgb(187, 206, 187);
+  background-color: lightskyblue;
+  @include index_main;
+}
 
-  display: grid;
-  gap: 5vh;
-  .main_row {
-    width: 100%;
-    height: 100vh;
-    // display
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .main_row_row {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      align-items: flex-end;
-      background-color: mediumblue;
-      .video_title {
-        // size
-        width: 60%;
-        // font
-        font-size: 40px;
-        display: block;
-        background-color: magenta;
-      }
-      .video_description {
-        // size
-        width: 40%;
-        // font
-        font-size: 18px;
-        // display
-        display: block;
-        text-align: right;
-        background-color: maroon;
-      }
-    }
-    .main_row_row:nth-child(1) {
-      justify-content: space-between;
-    }
-    .main_row_row:nth-child(2) {
-      width: 100%;
-      height: 50%;
-      background-color: limegreen;
-
-      display: flex;
-      align-content: center;
-      justify-content: center;
-    }
-    .main_row_row:nth-child(3) {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      align-self: flex-end;
-      justify-content: flex-end;
-      .video_description {
-        margin-right: 10px;
-      }
-      .video_description_clmn {
-        margin-right: 10px;
-      }
-    }
+@mixin index_main() {
+  @media screen and (min-width: 1025px) {
+    @content;
   }
-  .main_row:nth-child(odd) {
-    background-color: lightskyblue;
-  }
-  .main_row:nth-child(even) {
-    background-color: lightgreen;
+  @media screen and (max-width: 1025px) {
+    @content;
+    #aside-left {
+      width: 50%;
+    }
+    #index_main {
+      width: 50%;
+    }
   }
 }
 
