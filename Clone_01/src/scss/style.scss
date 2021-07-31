@@ -1,148 +1,192 @@
-@import "_variable.scss";
-@import "_animation.scss";
-@import "_responsive.scss";
-
 body {
-  // size
-  width: auto;
-  height: 2000vh;
-  // design
-  background-color: lightcoral;
+  background-color: wheat;
+  height: 300vh;
 }
 
-$font-size_title: 60px;
-$font-size_subtitle: 22px;
-$font-size_description: 18px;
-$font-size_link: 16px;
+button {
+  border: none;
+  background-color: inherit;
+}
+svg {
+  width: 20px;
+}
+$aside_back: white;
+$aside_font: lightcoral;
+$aside_font_title: rgb(243, 30, 30);
+$aside_font_subtitle: rgb(253, 51, 51);
+$aside_font_description: rgb(241, 42, 42);
+$aside_button: grey;
+$aside_button_underline: rgb(54, 47, 47);
 
-$font-color_title: rgb(247, 67, 67);
-$font-color_subtitle: rgb(233, 77, 77);
-$font-color_description: rgb(238, 146, 146);
-$font-color_link: rgb(209, 68, 68);
-
-$border_color: $font-color_link;
-$border_anchor: 1px solid $border_color;
-#aside-left {
-  // position
-  z-index: 2;
+#index_aside {
+  background-color: $aside_back;
   position: fixed;
-  // size
-  // 1025px 이하일때 미디어 쿼리 적용
-  width: 40%;
+  left: 0;
+
+  width: 50%;
   height: 100vh;
-  // design
-  background-color: white;
-  // display
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   .aside_clmn {
-    // size
-    width: 90%;
-    height: 100%;
-    // marign
-    margin: 5% 2.5% 0 2.5%;
-
-    // display
+    margin: 10%;
+    width: 80%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-  }
-  .aside_clmn:nth-child(1) {
-    // margin
-    margin-bottom: 30%;
-    // size
-    height: 20%;
-    #aside_title {
-      @extend %h1_title;
+    color: $aside_font;
+    h1 {
+      font-size: 60px;
+      color: $aside_font_title;
     }
-  }
-  .aside_clmn:nth-child(2) {
-    height: 50%;
-    align-items: center;
-    justify-content: flex-end;
-    #aside_subtitle {
-      @extend %h3_subtitle;
+    h3 {
+      font-size: 30px;
+      margin-bottom: 60px;
+      color: $aside_font_subtitle;
     }
-    #aside_description {
-      @extend %h4_description;
+    h4 {
+      font-size: 18px;
+      margin-bottom: 36px;
+      line-height: 22px;
+      color: $aside_font_description;
     }
     #aside_link {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
       a {
-        @extend %a;
-        margin-right: 10px;
+        display: inline-block;
+        height: 22px;
+        border-bottom: 1px solid $aside_button_underline;
         button {
-          @extend %button;
+          font-weight: 600;
+          color: $aside_button;
+        }
+        transition: all 0.3s linear;
+      }
+      a:hover {
+        background-color: rgb(236, 75, 46);
+        button {
+          color: white;
         }
       }
     }
   }
 }
+
+// main
 #index_main {
-  // position
   position: absolute;
   right: 0;
-  width: 60%;
-  background-color: lightskyblue;
-  @include index_main;
-}
 
-@mixin index_main() {
-  @media screen and (min-width: 1025px) {
-    @content;
-  }
-  @media screen and (max-width: 1025px) {
-    @content;
-    #aside-left {
-      width: 50%;
-    }
-    #index_main {
-      width: 50%;
-    }
-  }
-}
+  width: 50%;
+  height: auto;
+  background-color: rgb(233, 75, 75);
 
-%h1_title {
-  font-size: $font-size_title;
-  color: $font-color_title;
+  display: grid;
+  grid-template: repeat(1, 50vh) / repeat(1, 100%);
+  grid-auto-flow: row;
+  grid-auto-rows: 50vh;
+
+  .main_box {
+    margin: 5%;
+    width: 90%;
+    height: auto;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+
+    justify-content: center;
+    .main_rows {
+      display: flex;
+    }
+    .main_rows:nth-child(1) {
+      margin-bottom: 10px;
+      align-items: flex-end;
+      justify-content: space-between;
+      h2 {
+        font-size: 25px;
+      }
+      h4 {
+        font-size: 15px;
+        text-align: right;
+      }
+    }
+    .main_rows:nth-child(2) {
+      margin-bottom: 10px;
+      justify-content: center;
+      img {
+        width: 100%;
+        max-width: 600px;
+        height: 100%;
+      }
+    }
+    .main_rows:nth-child(3) {
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  .main_box:last-child {
+    position: relative;
+  }
 }
-%h3_subtitle {
-  @extend %h123456;
-  margin-bottom: 50px;
-  font-size: $font-size_subtitle;
-  color: $font-color_subtitle;
-}
-%h4_description {
-  @extend %h123456;
-  margin-bottom: 50px;
-  font-size: $font-size_description;
-  color: $font-color_description;
-}
-%h123456 {
-  line-height: 30px;
-  // 미디어 쿼리로 가로 배열 바꿀때 정렬
-}
-%a {
-  // size
-  width: auto;
-  height: 20px;
-  // font
-  font-size: $font-size_link;
+#footer {
+  // position
+  position: absolute;
+  bottom: 0;
+
   // display
-  display: inline-block;
-  color: $font-color_link;
-  border-bottom: $border_anchor;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    width: auto;
+    height: 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    // display
+    display: flex;
+    align-items: center;
+    button {
+      margin: 0 5px;
+      // font
+      font-size: 18px;
+    }
+    transition: all 0.3s linear;
+  }
+  a:hover {
+    background-color: lightcoral;
+  }
 }
-%button {
-  // design
-  color: $font-color_link;
-  border: inherit;
-  border-bottom: none;
-  background-color: inherit;
+@media screen and (max-width: 800px) {
+  #index_aside {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50vh;
+    .aside_clmn:nth-child(1) {
+      margin: 10% 10% 0 10%;
+      height: auto;
+      #aside_title {
+        font-size: 35px;
+        margin-bottom: 70px;
+      }
+    }
+    .aside_clmn:nth-child(2) {
+      margin: 0 10% 10% 10%;
+      #aside_subtitle {
+        font-size: 30px;
+      }
+      #aside_description {
+        display: none;
+      }
+    }
+  }
+  #index_main {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: translateY(50vh);
+  }
 }
