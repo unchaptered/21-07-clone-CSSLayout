@@ -1,0 +1,117 @@
+svg {
+  width: 20px;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+#nav-top {
+  z-index: 2;
+  background-color: white;
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#nav-top .nav_clmn {
+  width: 30%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#nav-top .nav_clmn:first-child {
+  margin-left: 20px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#nav-top .nav_clmn:nth-child(2) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#nav-top .nav_clmn:nth-child(2) svg {
+  width: 50px;
+}
+
+#nav-top .nav_clmn:last-child {
+  margin-right: 20px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#nav-top .nav_clmn:last-child span {
+  display: block;
+}
+
+#nav-top_second {
+  z-index: 2;
+  background-color: #ffddb4;
+  position: fixed;
+  top: 110px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#nav-top_second button {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#nav-top_second button:first-child {
+  margin-top: 20px;
+}
+
+#nav-top_second button:last-child {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  #btn_nail_studio,
+  #btn_shop_product,
+  #btn_journal,
+  #btn_shopping,
+  #btn_shopping-count {
+    display: none;
+    visibility: none;
+  }
+  #btn_menu-folding {
+    display: inherit;
+  }
+}

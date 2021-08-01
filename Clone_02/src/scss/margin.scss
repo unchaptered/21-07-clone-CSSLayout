@@ -1,0 +1,11 @@
+// 다 만들고 부족한 마진 설정용
+$margin_50: 50px;
+$margin_40: 40px;
+$margin_30: 30px;
+$margin_20: 20px;
+$margin_10: 10px;
+
+.margin_div {
+  margin-bottom: $margin_50;
+  margin-top: $margin_50;
+}

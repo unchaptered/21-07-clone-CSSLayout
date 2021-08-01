@@ -17,9 +17,254 @@
     <link rel="stylesheet" href="src/css/style.css"/>
   </head>
   <body>
+    <nav id="nav-top"> <!-- 최상단 네비게이션 바 -->
+      <div class="nav_clmn">
+        <button id="btn_menu-folding" class="nav_button-folding"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg></button>
+        <button id="btn_nail_studio" class="nav_button-basic">nail studio</button>
+        <button id="btn_shop_product" class="nav_button-basic">shop product</button>
+      </div>
+      <div class="nav_clmn">
+        <svg id="btn_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="user-select: auto;">
+          <path d="M4.2,4h5.7c1.3,0,2,0.6,2,1.7c0,0.7-0.2,1.7-2.1,1.7H4.2V4z M4.2,10.4h6c2.9,0,4.9-1.9,4.9-4.8
+            c0-2.8-2-4.5-5.1-4.5H1.1v15.6h3.1V10.4z" style="user-select: auto;"></path>
+          <path d="M50.9,5.6L53,9.8h-4.2L50.9,5.6z M49.7,1l-7.7,15.6h3.4l1.9-3.9h7.1l1.9,3.9h3.4L52,1H49.7z" style="user-select: auto;"></path>
+          <rect x="90.9" y="0.9" width="3.1" height="15.8" style="user-select: auto;"></rect>
+          <polygon points="88.9,47.7 97.2,57.3 99.1,57.3 99.1,41.7 96,41.7 96,51.3 87.7,41.7 85.8,41.7 85.8,57.3
+            88.9,57.3 " style="user-select: auto;"></polygon>
+          <polygon points="84.9,83.1 84.9,86 90.9,86 90.9,98.7 94,98.7 94,86 100,86 100,83.1 " style="user-select: auto;"></polygon>
+          <path d="M10.5,54.4H3.6v-4.1h6.8c1.3,0,2,0.7,2,2C12.4,53.6,11.7,54.4,10.5,54.4 M9.8,47.4H3.6v-2.7h6.2
+            c1.4,0,1.7,0.5,1.7,1.4C11.5,46.6,11.3,47.4,9.8,47.4 M15.6,52.4c0-1.6-0.6-2.9-1.9-3.9c0.6-0.7,0.9-1.5,0.9-2.6
+            c0-1.6-0.6-4.2-4.9-4.2H0.5v15.6h9.6C13.5,57.3,15.6,55.4,15.6,52.4" style="user-select: auto;"></path>
+          <path d="M8.1,96.1c-2.9,0-4.9-2.2-4.9-5.2c0-3,2.1-5.2,4.9-5.2c2.9,0,4.9,2.2,4.9,5.2
+            C13,93.9,10.9,96.1,8.1,96.1 M8.1,82.8c-4.7,0-8.1,3.4-8.1,8.2c0,4.7,3.4,8.1,8.1,8.1c4.7,0,8.1-3.4,8.1-8.1
+            C16.1,86.2,12.8,82.8,8.1,82.8" style="user-select: auto;"></path>
+          <polygon points="55.3,83.1 51,88.5 46.6,83.1 42.7,83.1 49,90.9 42.6,98.7 46.4,98.7 50.9,93.2 55.4,98.7
+            59.3,98.7 52.9,90.8 59.2,83.1 " style="user-select: auto;"></polygon></svg>
+      </div>
+      <div class="nav_clmn">
+        <button id="btn_journal" class="nav_button-basic">JOURNAL</button>
+        <button id="btn_shopping" class="nav_button-basic"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></button>
+        <button id="btn_shopping-count"><span class="nav_shopping-count">01<span></span></button>
+      </div>
+    </nav> <!-- 최상단 두번째 네비게이션 바 -->
+    <div id="menu"  class="display-none">
+      <nav id="nav-top_second">
+        <button id="nav_menu-1" class="nav_top_second_button">Hello This is Button</button>
+        <button id="nav_menu-2" class="nav_top_second_button">Hello This is Button</button>
+        <button id="nav_menu-3" class="nav_top_second_button">Hello This is Button</button>
+        <button id="nav_menu-4" class="nav_top_second_button">Hello This is Button</button>
+        <button id="nav_menu-5" class="nav_top_second_button">Hello This is Button</button>
+      </nav>
+    </div>
+
+    <main> <!-- 메인 내용, margin 가운데 정렬용 -->
+      <div class="product_box product_box_2x2 margin_div">
+        <div><img src="src/img/no_product_randering/01.jpg"/></div>
+        <div class="product_box_box">
+          <div class="product_box_box_box">
+            <h2 class="product_description long-text">Just in time for Summer, Like Canyon + Like Electric is our neon-meets-neutral color story that gives you the best of both worlds.</h2>
+            <a><button class="button-border">discover now</button></a></div></div>
+        <div><img src="src/img/no_product_randering/02.jpg"/></div>
+        <div class="product_box_box">
+          <div class="product_box_box_box">
+            <h6 class="product_footer">OUR STUDIO</h6>
+            <h2 class="product_description long-text">Book new nails at our Upper East Side studio</h2>
+            <a><button class="button-border">book a manicure</button></a>
+          </div>
+        </div>
+      </div> <!-- 그리드 2x2 => 1x4 -->
+
+      <!-- flex -->
+      <div class="porduct_box-flex">
+        <h6 class="product_footer">THE SHOP</h6>
+        <h2 class="product_description">Our Newest Polish Colors</h2>
+      </div>
+
+      <!-- grid 1x3 -->
+      <div id="something"class="product_box product_box_3x3 margin_div">
+        <div class="product_box-column">
+          <div class="obejct-fit_parent">
+            <img class="object-fit" src="src/img//no_product_randering/product_sample.jpg" alt="">
+          </div>
+          <div class="product_box_clmn_row">
+            <h6 class="product_footer">power couple</h6>
+            <h2 class="product_description">Like Canyon + Like Electric</h2>
+            <p class="product_price">$ 40</p>
+            <a><button class="button-border">add to cart</button></a>
+          </div>
+        </div>
+        <div class="product_box-column">
+          <div class="obejct-fit_parent">
+            <img class="object-fit" src="src/img//no_product_randering/product_sample.jpg" alt="">
+          </div>
+          <div class="product_box_clmn_row">
+            <h6 class="product_footer">power couple</h6>
+            <h2 class="product_description">Like Canyon + Like Electric</h2>
+            <p class="product_price">$ 40</p>
+            <a><button class="button-border">add to cart</button></a>
+          </div>
+        </div>
+        <div class="product_box-column">
+          <div class="obejct-fit_parent">
+            <img class="object-fit" src="src/img//no_product_randering/product_sample.jpg" alt="">
+          </div>
+          <div class="product_box_clmn_row">
+            <h6 class="product_footer">power couple</h6>
+            <h2 class="product_description">Like Canyon + Like Electric</h2>
+            <p class="product_price">$ 40</p>
+            <a><button class="button-border">add to cart</button></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- grid 1x2-->
+      <div class="product_box product_box_1x2 margin_div">
+        <div><img src="src/img/no_product_randering/03.jpg"/></div>
+        <div class="product_box_box">
+          <div class="product_box_box_box">
+            <h6 class="product_footer">gift card</h6>
+            <h2 class="product_description">Give the gift of the Paintbox experience for a manicure that tells a story.</h2>
+            <a><button class="button-border">discover now</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- flex -->
+      <div class="porduct_box-flex margin_div">
+        <h6 class="product_footer">inspiration</h6>
+        <h2 class="product_description">How to use it: Like Canyon + Like Electric</h2>
+        <div class="obejct-fith">
+          <img class="porduct_box-flex_img" src="src/img/no_product_randering/porduct_crayon_view.jpg" alt="">
+        </div>
+        <a><button class="button-border">shop power couple</button></a>
+      </div>
+
+      
+      <!-- grid 3x2 -->
+      <div class="product_box product_box_3x2 margin_div">
+        <div class="product_box_img"><img src="src/img/no_product_randering/04.jpg"/></div>
+        <div class="product_box_box">
+          <div class="product_box_box_box">
+            <h6 class="product_footer">Jan 30, 2021</h6>
+            <h2 class="product_description">Nails of New York: Marquis Bias</h2>
+            <a>
+              <button class="button-arrow">read story
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </button>
+              
+            </a>
+          </div>
+        </div>
+        <div class="product_box_img"><img src="src/img/no_product_randering/05.jpg"/></div>
+        <div class="product_box_box">
+          <div class="product_box_box_box">
+            <h6 class="product_footer">Jun 3, 2021</h6>
+            <h2 class="product_description">Nail Inspiration:THe Story Behind Our Spring-Summer 2021 Power Couple</h2>
+            <a>
+              <button class="button-arrow">read story
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="product_box_img"><img src="src/img/no_product_randering/06.jpg"/></div>
+        <div class="product_box_box">
+          <div class="product_box_box_box">
+            <h6 class="product_footer">Jun 2, 2021</h6>
+            <h2 class="product_description">Nails of New York: Dr. Lara Devgan</h2>
+            <a>
+              <button class="button-arrow">read story
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- flex -->
+      <div class="porduct_box-flex margin_div">
+        <h6 class="product_footer">join our conversation</h6>
+        <h2 class="product_description">Be the first to hear about new launches and enjoy 10% off your first polish order.</h2>
+        <h2 class="product_description_small">10% discount code (first login)</h2>
+        <form>
+          <div class="product_input">
+            <input type="email" placeholder="Enter Your email">
+            <button type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- grid 1x2-->
+      <div class="product_box product_box_1x2 margin_div">
+        <div><img src="src/img/no_product_randering/07.jpg"/></div>
+        <div class="product_box_box">
+          <div class="product_box_box_box">
+            <h6 class="product_footer">gift card</h6>
+            <h2 class="product_description">Give the gift of the Paintbox experience for a manicure that tells a story.</h2>
+            <a><button class="button-border">discover now</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- grid 2x8-->
+      <div class="product_box product_box_2x8 margin_div">
+        <div><img src="src/img/no_product_randering/mini_01.jpg"/></div>
+        <div><img src="src/img/no_product_randering/mini_02.jpg"/></div>
+        <div><img src="src/img/no_product_randering/mini_03.jpg"/></div>
+        <div><img src="src/img/no_product_randering/mini_04.jpg"/></div>
+        <div><img src="src/img/no_product_randering/mini_05.jpg"/></div>
+        <div><img src="src/img/no_product_randering/mini_06.jpg"/></div>
+        <div><img src="src/img/no_product_randering/mini_07.jpg"/></div>
+        <div><img src="src/img/no_product_randering/mini_08.jpg"/></div>
+      </div>
+
+      <!-- flex -->
+      <div class="porduct_box-flex margin_div">
+        <h6 class="product_footer">sing up</h6>
+        <h2 class="product_description">Paintbox Newsletter</h2>
+        <form>
+          <div class="product_input">
+            <input type="email" placeholder="Enter Your email">
+            <button type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer id="footer_box"> <!-- 최하단 주석 페이지-->
+      <div id="footer">
+        <div class="footer_clmn">
+          <button class="product_footer">support</button>
+          <button class="product_footer">f.a.q.</button>
+          <button class="product_footer">privacy policy</button>
+          <button class="product_footer">teams and conditions</button>
+          <button class="product_footer">accessibility</button>
+        </div>
+        <div class="footer_clmn">
+          <button class="product_footer">follow us</button>
+          <button class="product_footer">instagram</button>
+          <button class="product_footer">pinterest</button>
+          <button class="product_footer">faebook</button>
+          <button class="product_footer">Newsletter</button>
+        </div>
+        <div class="footer_clmn">
+          <button class="product_footer">paintbox</button>
+          <button class="product_footer">our studio</button>
+          <button class="product_footer">careers</button>
+          <button class="product_footer">press</button>
+          <button class="product_footer">contact us</button>
+        </div>
+      </div>
+    </footer>
+<!--     
     <nav id="nav_top">
       <div id="nav_top_left" class="nav_clmn">
-        <svg id="button_simple_menu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        <button id=""><svg id="button_simple_menu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg></button>
         <button id="button_nail_studio">NAIL STUDIO</button>
         <button id="button_shop_product">SHOP PRODUCT</button>
       </div>
@@ -53,7 +298,7 @@
       <h2 class="nav_top_more_menu">3</h2>
       <h2 class="nav_top_more_menu">4</h2>
       <h2 class="nav_top_more_menu">5</h2>
-    </nav>
-    <script src="src/javascript/base.js"></script>
+    </nav> -->
+    <script src="src/javascript/menu.js"></script>
   </body>
 </html>

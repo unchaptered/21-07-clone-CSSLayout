@@ -1,8 +1,76 @@
 @import "_variable.scss";
 @import "_animation.scss";
 @import "_responsive.scss";
+@import "nav_top.scss";
 
 body {
-  color: $color_blue;
-  background-color: lightcoral;
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+  .grid_box {
+    transform: translateY($nav_top_height);
+    width: 1fr;
+    height: 33;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .grid_row {
+      width: 30vw;
+      height: 20vw;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .grid_title {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      text-transform: uppercase;
+    }
+  }
+  .grid_box:nth-child(odd) {
+  }
+}
+@media screen and (max-width: 900px) {
+  body {
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    .grid_box {
+      width: 50vw;
+      height: 50vw;
+      .grid_row {
+        width: 50vw;
+        height: 47vw;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .grid_title {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    .grid_box {
+      width: 100vw;
+      height: 100vw;
+      .grid_row {
+        width: 100vw;
+        height: 95vw;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .grid_title {
+        text-transform: uppercase;
+      }
+    }
+  }
 }
