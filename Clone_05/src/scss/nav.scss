@@ -1,0 +1,55 @@
+@import "_animation.scss";
+@import "_responsive.scss";
+@import "_variable.scss";
+
+%display_flex_between {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%display_flex_center {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav_top {
+  // position
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  // size
+  height: 40px;
+  // dispaly
+  @extend %display_flex_between;
+  #nav_menu_svg {
+    margin-left: $margin_percent_20;
+    width: 30px;
+  }
+  #nav_brand_name {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  #nav_content_sort {
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: $margin_percent_20;
+  }
+}
+// 미디어 쿼리 - 네비게이션 바
+@media screen and (max-width: 1000px) {
+  #nav_brand_name {
+    margin-right: 35%;
+  }
+  #nav_content_sort {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  #nav_brand_name {
+    display: none;
+  }
+}

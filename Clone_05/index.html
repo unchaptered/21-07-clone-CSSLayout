@@ -5,13 +5,178 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <title>00 - CSS Layout</title>
+    <title>05 - CSS Layout</title>
 
     <link rel="stylesheet" href="src/reset.css"/>
     <link rel="stylesheet" href="src/css/style.css"/>
   </head>
   <body>
-    Hello My Name is "Unchaptered"
+
+    <!-- nav -->
+    <nav id="nav_top">
+      <svg id="nav_menu_svg" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      <p id="nav_brand_name">Schwartz</p>
+      <p id="nav_content_sort">Media</p>
+    </nav>
+
+
+    <!-- main -->
+    <main>
+      <div id="index_row_1" class="index_row-flex">
+        <img class="index_row-img"src="src/img/phooto/slide_img_01.jpg" alt="">
+      </div>
+      <div id="index_row_2" class="index_row-flex">
+        <p class="index_row_title">News that lasts</p>
+        <svg class="index_row_icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+      </div>
+      <div id="index_row_3" class="index_row-flex">
+        <p id="index_row_news"class="index_row_description">
+          <strong>About</strong>
+          Schwartz Media publishes intelligent news and current affairs that breaks the 24-hour news cycle. We offer a nuanced examination of Australia and the world, focused on fresh insight and literary expression. Our audience reads to know, not just to agree. We invest in long-form journalism where the issues demand it, providing writing of a quality that makes difficult topics clear. Schwartz Media publishes Australia’s most respected writers across The Saturday Paper, The Monthly magazine and the daily podcast 7am, alongside our sister publications, Quarterly Essay and Australian Foreign Affairs.
+        </p>
+      </div>
+      <div id="index_row_4" class="index_row-flex">
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" /></svg>
+          <p>View our Companies</p>
+        </button>
+      </div>
+
+      <!-- content -->
+      <div id="index_row_5" class="index_row-grid reverse">
+        <div class="grid_text">
+          <p class="index_grid_subtitle">Journalism</p>
+          <p class="index_grid_description">Our Our journalists create in-depth, independent, original public interest reporting, focusing on storytelling and insight.</p>
+          <button class="round_button">Learn more</button>
+        </div>
+        <div class="grid_img">
+          <img src="src/img/phooto/slide_img_02.jpg" alt="">
+        </div>
+      </div>
+
+      <div id="index_row_6" class="index_row-grid non-reverse">
+        <div class="grid_img">
+          <img src="src/img/phooto/slide_img_03.jpg" alt="">
+        </div>
+        <div class="grid_text">
+          <p class="index_grid_subtitle">The Monthly</p>
+          <p class="index_grid_description">The Monthly publishes long-form journalism from the nation's leading writers and thinkers, covering Australian politics, culture and ideas.</p>
+          <div>
+            <button class="round_button">Learn more</button>
+            <button class="round_button">Advertise</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="index_row_7" class="index_row-grid reverse">
+        <div class="grid_text">
+          <p class="index_grid_subtitle">The Saturday Paper</p>
+          <p class="index_grid_description">The Saturday Paper is a weekly newspaper, dedicated to telling the whole story. It publishes long-form accounts of the week’s key stories.</p>
+          <button class="round_button">Learn more</button>
+        </div>
+        <div class="grid_img">
+          <img src="src/img/phooto/slide_img_04.jpg" alt="">
+        </div>
+      </div>
+
+      <div id="index_row_8" class="index_row-grid non-reverse">
+        <div class="grid_img">
+          <img src="src/img/phooto/slide_img_05.jpg" alt="">
+        </div>
+        <div class="grid_text">
+          <p class="index_grid_subtitle">7am</p>
+          <p class="index_grid_description">7am is a daily news podcast that tells the big stories through in-depth interviews and sharp analysis.</p>
+          <div>
+            <button class="round_button">Learn more</button>
+            <button class="round_button">Advertise</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="index_row_9" class="index_row-grid">
+        <div class="grid_img special_type">
+          <p class="index_grid_img_title">Quarterly Essay</p>
+          <img src="src/img/phooto/slide_img_05.jpg" alt="">
+          <p class="index_grid_description">Quarterly Essay is the leading agenda-setting journal of politics and culture in Australia.</p>
+          <div>
+            <button class="round_button">Learn more</button>
+            <button class="round_button">Advertise</button>
+          </div>
+        </div>
+        <div class="grid_img special_type ">
+          <p class="index_grid_img_title">Australian Foreign Affairs</p>
+          <img src="src/img/phooto/slide_img_05.jpg" alt="">
+          <p class="index_grid_description">Australian Foreign Affairs is the country’s leading foreign affairs journal.</p>
+          <div>
+            <button class="round_button">Learn more</button>
+            <button class="round_button">Advertise</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="index_row_10" class="index_row-grid reverse">
+        <div class="grid_text">
+          <p class="index_grid_subtitle">Advertise</p>
+          <p class="index_grid_description">Get in touch with our advertising team.</p>
+          <button class="round_button">Learn more</button>
+        </div>
+        <div class="grid_img">
+          <img src="src/img/phooto/slide_img_02.jpg" alt="">
+        </div>
+      </div>
+
+      <div id="index_row_11" class="index_row-grid">
+        <div class="grid_img special_type">
+          <p class="index_grid_img_title">Shop</p>
+          <img src="src/img/phooto/slide_img_05.jpg" alt="">
+          <p class="index_grid_description">In collaboration with Alpha60, The Saturday Paper and The Monthly bring you a tote bag.</p>
+          <button class="round_button">Shop</button>
+        </div>
+        <div class="grid_img special_type">
+          <p class="index_grid_img_title">Give a gift</p>
+          <img src="src/img/phooto/slide_img_05.jpg" alt="">
+          <p class="index_grid_description">Give The Saturday Paper or The Monthly as a gift.</p>
+          <button class="round_button">Gift</button>
+        </div>
+      </div>
+
+      <div id="index_row_12" class="index_row-grid_3_1">
+        <div class="grid_text_ad">
+          <p class="index_grid_subtitle_ad">Advertise</p>
+          <p class="index_grid_description_ad">Get in touch with our advertising team.</p>
+          <button class="round_button">Learn more</button>
+        </div>
+        <div class="grid_text_ad">
+          <p class="index_grid_subtitle_ad">Advertise</p>
+          <p class="index_grid_description_ad">Get in touch with our advertising team.</p>
+          <button class="round_button">Learn more</button>
+        </div>
+        <div class="grid_text_ad">
+          <p class="index_grid_subtitle_ad">Advertise</p>
+          <p class="index_grid_description_ad">Get in touch with our advertising team.</p>
+          <button class="round_button">Learn more</button>
+        </div>
+      </div>
+
+
+      <!-- <button class="round_button">Learn more</button>
+      <button class="round_button">Advertise</button> -->
+    </main>
+
+    <footer id="footer_bottom">
+      <div class="footer_row">
+        <div class="footer_clmn">Schwartz</div>
+        <div class="footer_clmn">Schwartz Media</div>
+        <div class="footer_clmn">Schwartz Books</div>
+      </div>
+      <div class="footer_row">
+        <p>TEams&Conditions</p>
+        <p>Privacy Policy</p>
+        <p>ⓒ 2021 Schwartz Publishing (base)</p>
+        <p>All rights reserved</p>
+        <p>Clone Coding By Unchaptered</p>
+      </div>
+    </footer>
     <script src="src/javascript/base.js"></script>
   </body>
 </html>

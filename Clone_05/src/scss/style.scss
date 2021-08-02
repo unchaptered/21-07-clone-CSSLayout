@@ -1,8 +1,86 @@
-@import "_variable.scss";
 @import "_animation.scss";
 @import "_responsive.scss";
+@import "_variable.scss";
+@import "nav.scss";
+@import "index_flex.scss";
+@import "index_grid.scss";
 
+/* 화면 구성 설명
+  index.html 는 다음의 파일을 임포트한다
+  nav.scss          하이
+  index_grid.scss   display grid 인 컨텐츠
+  index_flex.scss   display flex 인 컨텐츠
+
+  media query 는 다음의 px을 기준으로 변한다.
+  1000px over       font-size, margin
+  1000px under      font-size, margin. nav
+  800px under       font-size, margin, gird-template, nav
+*/
 body {
-  color: $color_blue;
-  background-color: lightcoral;
+  #footer_bottom {
+    width: 90%;
+    height: 120px;
+    padding: 5%;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    // display
+    display: flex;
+    flex-direction: column;
+    .footer_row:nth-child(1) {
+      max-width: 50%;
+      margin-left: 25%;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .footer_clmn:nth-child(1) {
+        font-size: 30px;
+        align-self: flex-end;
+      }
+      .footer_clmn:nth-child(2),
+      .footer_clmn:nth-child(3) {
+        font-size: 20px;
+        align-self: flex-end;
+      }
+    }
+    .footer_row:nth-child(2) {
+      max-width: 50%;
+      margin-left: 25%;
+      font-size: 12px;
+      font-weight: 300;
+    }
+    .footer_row:nth-child(1) {
+      transform: translateX(-10px);
+    }
+  }
+  @media screen and (max-width: 1020px) {
+    #footer_bottom {
+      .footer_row:nth-child(1) {
+        .footer_clmn:nth-child(3) {
+          display: none;
+        }
+      }
+      .footer_row:nth-child(1) {
+        transform: translateX(-90px);
+      }
+      .footer_row:nth-child(2) {
+        transform: translateX(-80px);
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    #footer_bottom {
+      .footer_row:nth-child(1) {
+        .footer_clmn:nth-child(2) {
+          display: none;
+        }
+      }
+      .footer_row:nth-child(1) {
+        transform: translateX(-90px);
+      }
+      .footer_row:nth-child(2) {
+        transform: translateX(-80px);
+      }
+    }
+  }
 }
