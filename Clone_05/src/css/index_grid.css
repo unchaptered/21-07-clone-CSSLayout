@@ -30,6 +30,8 @@ main .index_row-flex {
   top: 0;
   background-color: white;
   height: 40px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 #nav_top #nav_menu_svg {
@@ -200,6 +202,13 @@ main .index_row-flex button p {
   font-weight: 300;
   width: 120px;
   height: 24px;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+.round_button:hover {
+  color: white;
+  background-color: #1d1d1d;
 }
 
 body .index_row-grid {

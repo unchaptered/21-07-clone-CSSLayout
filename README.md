@@ -63,14 +63,14 @@
 
 ## To Clone:
 
-- [x] [https://besthorrorscenes.com/](https://besthorrorscenes.com/)
-- [x] [https://paint-box.com/](https://paint-box.com/)
-- [x] [http://10x19.co/](http://10x19.co/)
-- [x] [http://www.z-o-o.fr/](http://www.z-o-o.fr/)
-- [x] [https://schwartzmedia.com.au/](https://schwartzmedia.com.au/)
-- [x] [https://tolv.dk/](https://tolv.dk/)
-- [x] [https://rodicdavidson.co.uk/](https://rodicdavidson.co.uk/)
-- [x] [https://beige.de/](https://beige.de/)
-- [x] [http://donicaida.com/](http://donicaida.com/)
-- [x] [https://canalstreet.market/](https://canalstreet.market/)
-- [x] [https://wonhundred.com/](https://wonhundred.com/)
+- [x] [https://besthorrorscenes.com/](https://besthorrorscenes.com/)1 <complete>
+- [x] [https://paint-box.com/](https://paint-box.com/)2 <complete>
+- [x] [http://10x19.co/](http://10x19.co/)3 <complete>
+- [x] [http://www.z-o-o.fr/](http://www.z-o-o.fr/)4 <complete>
+- [x] [https://schwartzmedia.com.au/](https://schwartzmedia.com.au/)5 <complete>
+- [x] [https://tolv.dk/](https://tolv.dk/)6 <complete>
+- [x] [https://rodicdavidson.co.uk/](https://rodicdavidson.co.uk/)7 <complete>
+- [x] [https://beige.de/](https://beige.de/)8
+- [x] [http://donicaida.com/](http://donicaida.com/)9 <complete>
+- [x] [https://canalstreet.market/](https://canalstreet.market/)10
+- [x] [https://wonhundred.com/](https://wonhundred.com/)11

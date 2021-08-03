@@ -2,7 +2,205 @@
 @import "_animation.scss";
 @import "_responsive.scss";
 
+$font-basic: black;
+$font-light: rgb(73, 73, 73);
+$font-hover: rgb(36, 36, 207);
+
+%font-basic {
+  color: $font-basic;
+}
+%font-light {
+  color: $font-light;
+}
+%font-hover {
+  color: $font-hover;
+}
+%all-transition {
+  transition: all 0.1s ease-in-out;
+}
+%button-hover {
+  @extend %font-hover;
+}
+%button {
+  border: none;
+  background-color: initial;
+  font-size: 1.5rem;
+  @extend %all-transition;
+  @media screen and (max-width: 1000px) {
+    font-size: 1.2rem;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 0.8rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 0.8rem;
+  }
+}
+%size_nav_left {
+  width: 30%;
+  font-size: 1rem;
+  @extend %all-transition;
+  @media screen and (max-width: 1000px) {
+    width: 35%;
+  }
+  @media screen and (max-width: 800px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 600px) {
+    animation: disappear_nav_left 0.3s forwards;
+  }
+  @keyframes disappear_nav_left {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      display: none;
+    }
+  }
+}
+%margin-left {
+  margin-left: 30%;
+  @extend %all-transition;
+  @media screen and (max-width: 1000px) {
+    margin-left: 35%;
+  }
+  @media screen and (max-width: 800px) {
+    margin-left: 40%;
+  }
+  @media screen and (max-width: 600px) {
+    animation: translate_nav_top 0.3s both;
+  }
+  @keyframes translate_nav_top {
+    from {
+      margin-left: 50%;
+    }
+    to {
+      margin-left: 0;
+    }
+  }
+} // nav_top 과 index_main 의 margin-left 값
+
 body {
-  color: $color_blue;
-  background-color: lightcoral;
+  font-size: 10px;
+}
+body {
+  #nav_left {
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    @extend %size_nav_left;
+    .nav_left_clmn {
+      display: flex;
+      padding: 10px;
+      #site_title {
+        margin: 0 10px 0 0;
+        @extend %font-basic;
+      }
+      #site_subtitle {
+        @extend %font-light;
+      }
+    }
+    .nav_left_clmn:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      button {
+        @extend %button;
+        font-size: 1rem;
+        text-align: left;
+      }
+      button:hover {
+        @extend %button-hover;
+      }
+    }
+  }
+}
+
+body {
+  #nav_top {
+    @extend %margin-left;
+    .nav_top_clmn {
+      padding: 10px;
+      display: flex;
+      button {
+        @extend %button;
+        @extend %all-transition;
+      }
+      button:hover {
+        @extend %button-hover;
+      }
+    }
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+  }
+}
+
+%index_main-grid {
+  transform: translateY(50px);
+  background-color: rgba(157, 157, 201, 0.185);
+  width: 70%;
+  display: grid;
+  gap: 10px;
+  grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+  @extend %all-transition;
+  .index_main_img-box {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    @extend %all-transition;
+    .index_main_img-src {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      mix-blend-mode: luminosity;
+      @extend %all-transition;
+    }
+    .index_main_img-title {
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+  .index_main_img-box:hover {
+    background-color: initial;
+    .index_main_img-src {
+      transform: scale(0.95);
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    transform: translateY(45px);
+    width: 65%;
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    .index_main_img-box {
+      .index_main_img-title {
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    transform: translateY(40px);
+    width: 60%;
+    grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    .index_main_img-box {
+      .index_main_img-title {
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    transform: translateY(30px);
+    width: 100%;
+    grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    .index_main_img-box {
+      .index_main_img-title {
+      }
+    }
+  }
+}
+
+body {
+  #index_main-grid {
+    @extend %margin-left;
+    @extend %index_main-grid;
+  }
 }

@@ -11,6 +11,11 @@
   font-weight: 300;
   width: 120px;
   height: 24px;
+  transition: all 0.1s ease-in;
+}
+.round_button:hover {
+  color: white;
+  background-color: rgb(29, 29, 29);
 }
 body {
   .index_row-grid {

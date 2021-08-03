@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>07 - CSS Layout</title>
+
+    <link rel="stylesheet" href="src/reset.css"/>
+    <link rel="stylesheet" href="src/css/style.css"/>
+    <link rel="stylesheet" href="src/css/style_practice.css"/>
+  </head>
+  <body>
+    <!-- nav_left -->
+    <nav id="nav_left">
+      <div class="nav_left_clmn">
+        <p id="site_title">Unchaptered</p>
+        <p id="site_subtitle">Github</p>
+      </div>
+      <div class="nav_left_clmn">
+      </div>
+    </nav>
+
+    <!-- nav_top -->
+    <nav id="nav_top">
+      <div class="nav_top_clmn">
+        <a href=""><button id="button_projects">Upper</button></a>
+        <a href=""><button id="button_practice">Practice</button></a>
+        <a href=""><button id="button_expertise">Expertise</button></a>
+        <a href=""><button id="button_news">News</button></a>
+        <a href=""><button id="button_exhibition">Exhibition</button></a>
+        <a href=""><button id="button_contact">Contact</button></a>
+      </div>
+    </nav>
+
+    <main id="index_main-grid-1x2">
+        <div class="main_text_box">
+            <span> We are Rodić Davidson Architects, a London and Cambridge based design studio with a belief that buildings are more than brick and mortar; they are an extension of ourselves and our environment, places where we can flourish and develop. This belief underpins everything we do, whether we are designing for high end residential, commercial or development, we always create bespoke and sustainable designs. Our practice specialises in design-led refurbishments and highly crafted new builds, with an expanding portfolio of work across London and beyond. The team’s design approach is guided by an expertise in central London planning policy and historic buildings.</span>
+            <br>
+            <span>Read more about our expertise here including Heritage and Listed Buildings, New Builds and Farmhouses.</span>
+        </div>
+        <div class="main_photo_box">
+            <img class="main_photo" src="src/img/index_practice/travel_01.jpg" alt="">
+        </div>
+    </main>
+    <script src="src/javascript/index_main-img-settings.js"></script>
+  </body>
+</html>

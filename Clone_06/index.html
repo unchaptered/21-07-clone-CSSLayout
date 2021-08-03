@@ -5,13 +5,169 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <title>00 - CSS Layout</title>
+    <title>06 - CSS Layout</title>
 
     <link rel="stylesheet" href="src/reset.css"/>
     <link rel="stylesheet" href="src/css/style.css"/>
   </head>
   <body>
-    Hello My Name is "Unchaptered"
+    <!-- nav_top -->
+    <nav id="nav_top">
+      <div class="nav_clmn">
+        <button id="nav_menu-button" class="display-none"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg></button>
+        <button class="product nav_top_clmn_text_button">Products</button>
+        <button class="instagram nav_top_clmn_text_button">Instagram</button>
+        <button class="aboutus nav_top_clmn_text_button">About us</button>
+      </div>
+      <div class="nav_clmn">
+        <button id="nav_top_brand">Tolv</button>
+      </div>
+      <div class="nav_clmn">
+        <button><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></button>
+      </div>
+    </nav>
+    <!-- nav_top-menu -->
+    <nav id="nav_top-menu" class="display-none">
+      <div class="nav_clmn">
+        <button class="product2 nav_top_clmn_text_button">Products</button>
+        <button class="instagram2 nav_top_clmn_text_button">Instagram</button>
+        <button class="aboutus2 nav_top_clmn_text_button">About us</button>
+      </div>
+    </nav>
+    <!-- nav_right -->
+    <nav id="nav_right">
+      <div class="nav_right_row">
+        <p class="nav_right_row_quotes">Eyes rest from an afternoon in the sun. Smooth textures feel cool on bare feet and skin.</p>
+        <p class="nav_right_row_whoes">Featuring Kitsune sofa, armchair and I-O coffee table (steel base)</p>
+      </div>
+      <div class="nav_right_row">
+        <p class="nav_right_row_quotes">Eyes rest from an afternoon in the sun. Smooth textures feel cool on bare feet and skin.</p>
+        <p class="nav_right_row_whoes">Featuring Kitsune sofa, armchair and I-O coffee table (steel base)</p>
+      </div>
+      <div class="nav_right_row">
+        <p class="nav_right_row_quotes">Eyes rest from an afternoon in the sun. Smooth textures feel cool on bare feet and skin.</p>
+        <p class="nav_right_row_whoes">Featuring Kitsune sofa, armchair and I-O coffee table (steel base)</p>
+      </div>
+      <div class="nav_right_row">
+        <p class="nav_right_row_quotes">Eyes rest from an afternoon in the sun. Smooth textures feel cool on bare feet and skin.</p>
+        <p class="nav_right_row_whoes">Featuring Kitsune sofa, armchair and I-O coffee table (steel base)</p>
+      </div>
+      <div class="nav_right_row">
+        <p class="nav_right_row_quotes">Eyes rest from an afternoon in the sun. Smooth textures feel cool on bare feet and skin.</p>
+        <p class="nav_right_row_whoes">Featuring Kitsune sofa, armchair and I-O coffee table (steel base)</p>
+      </div>
+      <!-- <p id="nav_right_quotes"></p>
+      <p id="nav_right_whoes">Featuring Kitsune sofa, armchair and I-O coffee table (steel base)</p> -->
+    </nav>
+    <!-- contnt -->
+    <main>  <!-- 그리드 -->
+      <div id="main_slider">
+        <div class="main_img_div">
+          <img src="src/img/furniture/furniture_1.jpg" alt="">
+        </div>
+        <div class="main_img_div">
+          <img src="src/img/furniture/furniture_2.jpg" alt="">
+        </div>
+        <div class="main_img_div">
+          <img src="src/img/furniture/furniture_3.jpg" alt="">
+        </div>
+        <div class="main_img_div">
+          <img src="src/img/furniture/furniture_4.jpg" alt="">
+        </div>
+        <div class="main_img_div">
+          <img src="src/img/furniture/furniture_5.jpg" alt="">
+        </div>
+      </div>
+
+      <header id="main_header">
+        <h1>Time for Living</h1>
+        <h3>Take time for life’s little moments. Browsing the news as you eat breakfast. Setting the table for hungry guests. Sinking in to your favourite armchair. At Tolv, your daily rituals are at the heart of our design. We make furniture to give you your best day, every day.</h3>
+        <h6>Find out more <a href="#">About us</a></h6>
+      </header>
+
+      <div id="main_product">
+        <div class="product_img_box">
+          <img src="src/img/furniture_2/01.jpg" alt="">
+        </div>
+        <div class="product_img_box">
+          <img src="src/img/furniture_2/02.jpg" alt="">
+        </div>
+        <div class="product_img_box">
+          <img src="src/img/furniture_2/03.jpg" alt="">
+        </div>
+        <div class="product_img_box">
+          <img src="src/img/furniture_2/04.jpg" alt="">
+        </div>
+        <div class="product_img_box">
+          <img src="src/img/furniture_2/05.jpg" alt="">
+        </div>
+        <div class="product_img_box">
+          <img src="src/img/furniture_2/06.jpg" alt="">
+        </div>
+        <div class="product_img_box">
+          <img src="src/img/furniture_2/07.jpg" alt="">
+        </div>
+        <div class="product_img_box">
+          <img src="src/img/furniture_2/08.jpg" alt="">
+        </div>
+        <div class="product_img_box">
+          <img src="src/img/furniture_2/09.jpg" alt="">
+        </div>
+        <div class="product_img_box">
+          <img src="src/img/furniture_2/10.jpg" alt="">
+        </div>
+        <div class="product_img_box">
+          <img src="src/img/furniture_2/11.jpg" alt="">
+        </div>
+        <div class="product_img_box">
+          <img src="src/img/furniture_2/12.jpg" alt="">
+        </div>
+      </div>
+    </main>
+
+    <nav id="nav_bottom">
+      <div class="nav_content">
+        <div class="nav_clmn">
+          <div class="nav_clmn_row">
+            <div class="nav_clmn">
+              <p class="nav_link_title">Products : </p>
+              <p>Lounge Chairs</p>
+              <p>Sofas</p>
+              <p>Daybeds</p>
+              <p>Poufs</p>
+              <p>Dining Chairs</p>
+              <p>Stools</p>
+              <p>Tables & Desks</p>
+              <p>Storage</p>
+            </div>
+            <div class="nav_clmn">
+              <p class="nav_link_title">Useful information : </p>
+              <p>Our Instagram</p>
+              <p>Our designers</p>
+              <p>Product care</p>
+            </div>
+            <div class="nav_clmn">
+              <p class="nav_link_title">Company : </p>
+              <p>News</p>
+              <p>About us</p>
+              <p>Contact us</p>
+            </div>
+            <div class="nav_clmn">
+              <p class="nav_link_title">Connect with us : </p>
+              <p>Facebook</p>
+              <p>Instagram</p>
+              <p>Blank</p>
+              <p class="nav_link_title nav_link_last">Access to : </p>
+              <p>Client login</p>
+            </div>
+          </div>
+        </div> <!-- end of .nav_clmn-->
+        <div id="copyrights" class="nav_clmn">All rights reserved Tolv ⓒ2021</div>
+      </div>
+    </nav>
     <script src="src/javascript/base.js"></script>
+    <script src="src/javascript/menu-folding.js"></script>
+    <script src="src/javascript/menu-scrollTo.js"></script>
+    <script src="src/javascript/resize-reset.js"></script>
   </body>
 </html>

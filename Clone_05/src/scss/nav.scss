@@ -38,6 +38,7 @@
     font-weight: 600;
     margin-right: $margin_percent_20;
   }
+  transition: all 0.1s ease-in-out;
 }
 // 미디어 쿼리 - 네비게이션 바
 @media screen and (max-width: 1000px) {

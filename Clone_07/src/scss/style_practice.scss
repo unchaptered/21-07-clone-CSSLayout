@@ -1,0 +1,104 @@
+@import "_variable.scss";
+@import "_animation.scss";
+@import "_responsive.scss";
+@import "style.scss";
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(58, 58, 58, 0.2);
+}
+
+body {
+  #index_main-grid-1x2 {
+    display: flex;
+    @extend %margin-left;
+    @extend %index_main-grid-1x2;
+  }
+}
+%index_main-grid-1x2 {
+  transform: translateY(50px);
+  width: 70%;
+  display: grid;
+  gap: 10px;
+  @extend %all-transition;
+  grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+  .main_text_box {
+    margin-left: 15%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    > span {
+      font-size: 1rem;
+    }
+    > span:nth-child(1) {
+      line-height: 20px;
+    }
+    > span:nth-child(3) {
+      color: blue;
+      transform: translateY(20px);
+      line-height: 20px;
+    }
+  }
+  .main_photo_box {
+    width: 100%;
+    height: 100%;
+    .main_photo {
+      width: 100%;
+      height: 94vh;
+      object-fit: cover;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    transform: initial;
+    width: 65%;
+    height: 100vh;
+    display: flex;
+    align-content: flex-end;
+    .main_text_box {
+      display: none;
+    }
+    .main_photo_box {
+      width: 100%;
+      height: 100vh;
+      .main_photo {
+        width: 100%;
+        height: 100vh;
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    transform: initial;
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    align-content: flex-end;
+    .main_text_box {
+      display: none;
+    }
+    .main_photo_box {
+      margin: initial;
+      padding: initial;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      align-self: flex-end;
+      .main_photo {
+        width: 100%;
+        height: 100vh;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    transform: initial;
+    width: 100%;
+    grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+  }
+}
